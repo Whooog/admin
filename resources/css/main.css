@@ -1,0 +1,141 @@
+body,ul,li,a {
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a:link,a:hover{
+    text-decoration: none;
+}
+#header {
+    background: #29A176;
+    /* box-shadow: 0px 0px 3px #000; */
+    border-bottom: 1px solid #000; 
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+ }
+ #header .nav > li > a {
+    color: #fff;
+}
+#header .nav > li > a:link,a:hover{
+    background-color:transparent !important;
+}
+.navbar {
+    margin-bottom: 0px;
+}
+#header .glyphicon {
+    margin-right: 15px;
+}
+.dropdown-menu {
+    border-radius: 8px;
+    overflow: hidden;
+}
+.dropdown-menu li {
+    padding-left: 20px;
+}
+.dropdown-menu li a {
+    padding: 10px 0px;
+    font-size: 13px;
+}
+#content {
+    height: 100%;
+    margin-top: 60px;
+    /* background: #29A176; */
+    z-index: 0;
+}
+#content .content-menu{
+    float: left;
+    width: 17%;
+    height: 100%;
+    box-shadow:0px 0px 3px #000;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    overflow: auto;
+
+}
+#content .content-menu .menu-personal {
+    width: 100%;
+    min-height:300px; 
+    background: url("../image/menu-1.png") no-repeat;
+}
+#content .content-menu .menu-personal img {
+    border-radius: 40px;
+    margin: 20px 10px 30px;  
+}
+#content .content-menu .menu-personal .sp-info {  
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 5px 10px;
+    margin-top: 32px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.main-menu li {
+    padding: 15px 0px;
+    padding-left: 25px;
+    /* background: red; */
+}
+.main-menu li a {
+    padding: 15px 0px;
+    color: #000;
+}
+.main-menu-son li {
+    width: 100%;
+    padding: 10px 0px;
+    padding-left: 25px;
+    /* background: red; */
+}
+.main-menu-son li a {
+    padding: 10px 0px;
+    color: #ccc !important;
+}
+#content .content-menu .menu-personal .sp-info span {
+    float: right;
+    font-size: 11px;
+}
+#content .glyphicon {
+    margin-right: 15px;
+    font-size: 12px;
+}
+#content .right {
+    float: right;
+}
+#content > div.content-info {
+    width: 83%;
+    float: right;
+    position: fixed;
+    top: 60px;
+    right: 0;
+} 
+#content > div.content-info > div.capiton{
+    background: #29A176;
+}
+#content > div.content-info > div.capiton a {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 15px !important;
+    color: #FFF;
+
+}
+#content ul {
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 13px;
+}
+#content .content-menu .menu-footer {
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 12px;
+    border-top: 1px solid #ccc; 
+    color: #ccc;
+    /* background: red; */
+}
