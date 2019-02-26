@@ -1,0 +1,23 @@
+body {
+    font-size: 12px;
+}
+#toolbar {
+    border: none;
+}
+#toolbar a {
+    padding: 5px 0px;
+    color: black;
+    margin-left: 20px;
+}
+
+#toolbar a:active,a:hover {
+    text-decoration: none;
+}
+
+.table{
+    border:none !important;
+}
+
+.table>thead>tr>th {
+    border:none !important;
+}

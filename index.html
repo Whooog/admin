@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="./resources/css/main.css">
 </head>
 
@@ -87,43 +88,41 @@
     <section id="content">
         <!-- 左侧菜单栏 -->
         <div class="content-menu">
-            <div class="menu-personal">
+            <div class="menu-personal" id="div05">
                 <a href="javascript:;">
                     <img src="./resources/image/avatar.jpg" alt="">
                     <div class="sp-info">
                         孟莉，您好！
                         <span class="glyphicon glyphicon-triangle-right"></span>
                     </div>
-                    <ul class="main-menu">
-                            <li class="waves-effect">
-                                <a class="waves-effect" href="javascript:;">
-                                    <span class="glyphicon glyphicon-user"></span>
-                                    个人资料
-                                </a>
-                            </li>
-                            <li class="waves-effect">
-                                <a class="waves-effect" href="javascript:;">
-                                    <span class="glyphicon glyphicon-user"></span>
-                                    隐私管理
-                                </a>
-                            </li>
-                            <li class="waves-effect">
-                                <a class="waves-effect" href="javascript:;">
-                                    <span class="glyphicon glyphicon-user"></span>
-                                    系统设置
-                                </a>
-                            </li>
-                            <li class="waves-effect">
-                                <a class="waves-effect" href="javascript:;">
-                                    <span class="glyphicon glyphicon-user"></span>
-                                    退出登录
-                                </a>
-                            </li>
-                        </ul>
                 </a>
-
-               
             </div>
+            <ul class="main-menu" id="ul05" style="display: none;">
+                <li class="waves-effect">
+                    <a class="waves-effect" href="javascript:;">
+                        <span class="glyphicon glyphicon-user"></span>
+                        个人资料
+                    </a>
+                </li>
+                <li class="waves-effect">
+                    <a class="waves-effect" href="javascript:;">
+                        <span class="glyphicon glyphicon-user"></span>
+                        隐私管理
+                    </a>
+                </li>
+                <li class="waves-effect">
+                    <a class="waves-effect" href="javascript:;">
+                        <span class="glyphicon glyphicon-user"></span>
+                        系统设置
+                    </a>
+                </li>
+                <li class="waves-effect">
+                    <a class="waves-effect" href="javascript:;">
+                        <span class="glyphicon glyphicon-user"></span>
+                        退出登录
+                    </a>
+                </li>
+            </ul>
             <div class="menu-list">
                 <ul class="main-menu">
                     <li class="waves-effect">
@@ -137,9 +136,9 @@
                             系统组织管理
                             <span class="glyphicon glyphicon-plus right"></span>
                         </a>
-                        <ul class="main-menu-son" id="ul01">
+                        <ul class="main-menu-son" id="ul01"  style="display: none;">
                             <li class="waves-effect">
-                                <a href="javascrip:;">系统管理</a>
+                                <a href="crud.html">系统管理</a>
                             </li>
                             <li class="waves-effect">
                                 <a href="javascrip:;">组织管理</a>
@@ -153,7 +152,7 @@
                             角色用户管理
                             <span class="glyphicon glyphicon-plus right"></span>
                         </a>
-                        <ul class="main-menu-son" id="ul02">
+                        <ul class="main-menu-son" id="ul02"  style="display: none;">
                             <li class="waves-effect">
                                 <a href="javascrip:;">角色管理</a>
 
@@ -170,7 +169,7 @@
                             权限资源管理
                             <span class="glyphicon glyphicon-plus right"></span>
                         </a>
-                        <ul class="main-menu-son" id="ul03">
+                        <ul class="main-menu-son" id="ul03"  style="display: none;">
                             <li class="waves-effect">
                                 <a href="javascrip:;">权限管理</a>
 
@@ -183,9 +182,9 @@
                             其他数据管理
                             <span class="glyphicon glyphicon-plus right"></span>
                         </a>
-                        <ul class="main-menu-son" id="ul04">
+                        <ul class="main-menu-son" id="ul04"  style="display: none;">
                             <li class="waves-effect">
-                                <a href="javascrip:;">公共码表</a>
+                                <a href="javascrip:Tab.addTab('公共列表','index.html?');">公共码表</a>
                             </li>
                             <li class="waves-effect">
                                 <a href="javascrip:;">绘画管理</a>
@@ -211,24 +210,54 @@
         <!-- 右侧内容区 -->
         <div class="content-info">
             <div class="capiton">
-                <a href="#">首页</a>
+                <a href="#" class="curr">首页</a>
             </div>
             <div class="pageContent">
-                <!-- <iframe src="welcome.jsp" id="mainFrame" name="mainFrame" 
-                        frameborder="0" width="100%"  height="100%" frameBorder="0">
-                        </iframe>  -->
-
+                    <div id="iframe_home" class="iframe cur">
+                            <p><h4>通用用户权限管理系统 <i style="color:#c00">(此站仅为静态页演示)</i></h4></p>
+                            <p><b>演示地址</b>：<a href="http://www.zhangshuzheng.cn/zhengAdmin" target="_blank">http://www.zhangshuzheng.cn/zhengAdmin</a></p>
+                            <p><b>系统简介</b>：本系统是基于RBAC授权和基于用户授权的细粒度权限控制通用平台，并提供单点登录、会话管理和日志管理。接入的系统可自由定义组织、角色、权限、资源等。</p><br/>
+                            <p><h4>系统功能概述：</h4></p>
+                            <p><b>系统组织管理</b>：系统和组织增加、删除、修改、查询功能。</p>
+                            <p><b>用户角色管理</b>：用户和角色增加、删除、修改、查询功能。</p>
+                            <p><b>资源权限管理</b>：资源和权限增加、删除、修改、查询功能。</p>
+                            <p><b>权限分配管理</b>：提供给角色和用户的权限增加、删除、修改、查询功能。</p>
+                            <p><b>单点登录(SSO)</b>：提供统一用户单点登录认证、用户鉴权功能。</p>
+                            <p><b>用户会话管理</b>：提供分布式用户会话管理</p>
+                            <p><b>操作日志管理</b>：提供记录用户登录、操作等日志。</p><br/>
+                            <p><h4>对外接口概述：</h4></p>
+                            <p><b>系统组织数据接口</b>、<b>用户角色数据接口</b>、<b>资源权限数据接口</b>、<b>单点登录(SSO)接口</b>、<b>用户鉴权接口</b></p><br/>
+                            <p><h4>关于作者</h4></p>
+                            <p><b>姓　　名</b>：张恕征</p>
+                            <p><b>电子邮箱</b>：469741414@qq.com</p>
+                            <p><h4>通用用户权限管理系统 <i style="color:#c00">(此站仅为静态页演示)</i></h4></p>
+                            <p><b>演示地址</b>：<a href="http://www.zhangshuzheng.cn/zhengAdmin" target="_blank">http://www.zhangshuzheng.cn/zhengAdmin</a></p>
+                            <p><b>系统简介</b>：本系统是基于RBAC授权和基于用户授权的细粒度权限控制通用平台，并提供单点登录、会话管理和日志管理。接入的系统可自由定义组织、角色、权限、资源等。</p><br/>
+                            <p><h4>系统功能概述：</h4></p>
+                            <p><b>系统组织管理</b>：系统和组织增加、删除、修改、查询功能。</p>
+                            <p><b>用户角色管理</b>：用户和角色增加、删除、修改、查询功能。</p>
+                            <p><b>资源权限管理</b>：资源和权限增加、删除、修改、查询功能。</p>
+                            <p><b>权限分配管理</b>：提供给角色和用户的权限增加、删除、修改、查询功能。</p>
+                            <p><b>单点登录(SSO)</b>：提供统一用户单点登录认证、用户鉴权功能。</p>
+                            <p><b>用户会话管理</b>：提供分布式用户会话管理</p>
+                            <p><b>操作日志管理</b>：提供记录用户登录、操作等日志。</p><br/>
+                            <p><h4>对外接口概述：</h4></p>
+                            <p><b>系统组织数据接口</b>、<b>用户角色数据接口</b>、<b>资源权限数据接口</b>、<b>单点登录(SSO)接口</b>、<b>用户鉴权接口</b></p><br/>
+                            <p><h4>关于作者</h4></p>
+                            <p><b>姓　　名</b>：张恕征</p>
+                            <p><b>电子邮箱</b>：469741414@qq.com</p>
+                        </div>
             </div>
         </div>
     </section>
     <!-- 底部页脚部分 -->
 
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="resources/plugins/jquery.1.12.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    
+    <script src="resources/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="./resources/js/index.js"></script>
-   
+   <script src="resources/js/commint.js"></script>
 </body>
 
 </html>
