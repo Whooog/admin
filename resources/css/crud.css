@@ -1,6 +1,12 @@
 body {
     font-size: 12px;
 }
+a {
+    color: black;
+}
+a:link,a:hover{
+    text-decoration: none !important;
+}
 #toolbar {
     border: none;
 }

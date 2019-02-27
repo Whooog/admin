@@ -25,10 +25,5 @@ window.onload=function(){
         })
 
         // 选项卡对象
-        var tab = {
-            addTab:function(title,url) {
-                var index = url.replace(/\./g,'_').replace(/\//g,'_').replace(/:/g,'_').replace(/?/g,'_').replace(/=/g,'_').replace(/&/g,'_');
-                console.log(index);
-            }
-        }
+       
 }
