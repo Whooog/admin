@@ -89,7 +89,7 @@ $(function() {
 var Tab = {
 	addTab: function(title, url) {
         console.log('执行');
-		var index = url.replace(/\./g, '_').replace(/\//g, '_').replace(/:/g, '_').replace(/\?/g, '_').replace(/,/g, '_').replace(/=/g, '_').replace(/&/g, '_');
+		var index = url.replace(/\./g, '_').replace(/\//g, '_').replace(/:/g, '_').replace(/\?/g, '_').replace(/,/g, '_').replace(/=/g, '_').replace(/&/g, '_')+title;
 		// 如果存在选项卡，则激活，否则创建新选项卡
 		if ($('#tab_' + index).length == 0) {
 	 		// 添加选项卡
